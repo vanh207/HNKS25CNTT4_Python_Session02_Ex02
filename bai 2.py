@@ -9,12 +9,9 @@ donor_weight = float(input("Enter donor's weight (kg): "))
 # Kiểm tra từng điều kiện riêng lẻ
 age_ok = donor_age >= 18
 weight_ok = donor_weight >= 50
-
-# Hệ thống kiểm tra điều kiện hiến máu
 if age_ok and weight_ok:                          # sửa "or" -> "and"
     print("Result: ELIGIBLE. Please proceed to the blood donation room.")
 else:
-    # Nêu rõ lý do không đủ điều kiện
     reasons = []
     if not age_ok:
         reasons.append(f"tuổi {donor_age} < 18")
